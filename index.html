@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.min.css">
+    <title>Super 7 Desafios</title>
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-firestore.js"></script>
+</head>
+<header class="navigation">
+    <nav class="navbar" role="navigation">
+        <input class="navbar__button" type="checkbox"/>
+        <span class="navbar__icon"></span>
+        <span class="navbar__icon"></span>
+        <span class="navbar__icon"></span>
+        
+        <ul class="navbar__list">
+            <a href="#" class="logo">S7</a>
+            <a class="navbar__link" href="#desafios"><li class="navbar__item">Desafios</li></a>
+            <a class="navbar__link" href="#formulario"><li class="navbar__item">Cadastre-se</li></a>
+            <a class="navbar__link" href="#contato"><li class="navbar__item">Contato</li></a>
+        </ul>
+    </nav>
+</header>
+
+<body>
+    <section class="container introduction" id="introducao">
+        <div class="introduction__area">
+            <h2 class="title">Um novo jeito de viver sua vida</h2>
+            <h1 class="logo">Super7</h1>
+            <a href="#formulario" class="btn btn-form btn-md">Eu quero mudar</a>
+        </div>
+    </section>
+
+    <main class="container" id="desafios">
+        <h1 class="title title--main">Conheça seu próximo nível</h1>
+        <div class="timeline">
+            <aside class="timeline__item">
+                <div class="timeline__icon">
+                    <img src="img/icon/drink-water.png">
+                </div>
+                <div class="timeline__content">
+                    <h2 class="timeline__title">1º Dia - Hidratação</h2>
+                    <p class="timeline__text">
+                        Você sabia que beber água regularmente melhora sua saúde? Ajudando no funcionamento dos órgãos, principalmente o cérebro, pele e rins, e, além disso pode te ajudar a perder ou ganhar peso. Veja aqui alguns benefícios dos líquidos e como eles podem te ajudar.
+                    </p>
+                    <figure class="timeline__img">
+                        <img src="img/drink-water.jpeg" alt="casal bebendo água">
+                    </figure>
+                    <div class="timeline__btn">
+                        <a class="btn btn-hover" href="#">Saiba mais</a>
+                    </div>
+                </div>
+            </aside>
+            <aside class="timeline__item">
+                <div class="timeline__icon">
+                    <img src="img/icon/exercises.png">
+                </div>
+                <div class="timeline__content timeline__content--right">
+                    <h2 class="timeline__title">2º Dia - Exercícios</h2>
+                    <p class="timeline__text">
+                        Exercícios físicos não servem apenas para te dar músculos ou para perder peso, eles podem melhorar sua postura, regulam alguns dos hormônios, regulam e melhoram o sono e proporcionam muitos outros benefícios. Veja as maravilhas que os exercícios podem fazer para sua vida.
+                    </p>
+                    <figure class="timeline__img">
+                        <img src="img/exercicios.jpg" alt="diversos tipos de exercícios físicos">
+                    </figure>
+                    <div class="timeline__btn">
+                        <a class="btn btn-hover" href="#">Saiba mais</a>
+                    </div>
+                </div>
+            </aside>
+            <aside class="timeline__item">
+                <div class="timeline__icon">
+                    <img src="img/icon/healthier.png">
+                </div>
+                <div class="timeline__content">
+                    <h2 class="timeline__title">3º Dia - Desintoxicação</h2>
+                    <p class="timeline__text">
+                        No dia-a-dia de qualquer pessoa é comum a ingestão de diversos alimentos que não são naturais e prejudicam o organismo, fazendo com que ele se desgaste mais que o necessário para processar aquilo. Quer alguns exemplos simples? Os temperos, alguns complementos da culinária como azeites,óleos e até mesmo a própria comida. Veja como alguns alimentos podem te intoxicar aos poucos e como é importante se livrar destas toxinas regularmente.
+                    </p>
+                    <figure class="timeline__img">
+                        <img src="img/detox.jpg" alt="frutas e verduras">
+                    </figure>
+                    <div class="timeline__btn">
+                        <a class="btn btn-hover" href="#">Saiba mais</a>
+                    </div>
+                </div>
+            </aside>
+            <aside class="timeline__item">
+                <div class="timeline__icon">
+                    <img src="img/icon/eat-well.png">
+                </div>
+                <div class="timeline__content timeline__content--right">
+                    <h2 class="timeline__title">4º Dia - Alimentação</h2>
+                    <p class="timeline__text">
+                        Alimentos saudáveis não são apenas sinônimos de perda de peso, como a maioria das pessoas acredita. Eles podem ser usados tanto para ganhar peso,quanto para melhorar a saúde das pessoas, aumentando significativamente as resistências do corpo com as vitaminas em suas qualidades naturais. Aprenda mais detalhes sobre o que uma boa alimentação saúdavel pode te fazer.
+                    </p>
+                    <figure class="timeline__img">
+                        <img src="img/alimentos-saudaveis.jpg" alt="jantar em família">
+                    </figure>
+                    <div class="timeline__btn">
+                        <a class="btn btn-hover" href="#">Saiba mais</a>
+                    </div>
+                </div>
+            </aside>
+            <aside class="timeline__item">
+                <div class="timeline__icon">
+                    <img src="img/icon/meditation.png">
+                </div>
+                <div class="timeline__content">
+                    <h2 class="timeline__title">5º Dia - Meditação</h2>
+                    <p class="timeline__text">
+                        Ter um corpo desejável, uma vida profissional espetacular e estar cercado de pessoas não servem de nada, se isso não estiver de acordo com a sua mente e o que você realmente deseja para si. Na meditação você irá organizar seus pensamentos e direcioná-los para os objetivos que realmente deseja alcançar.
+                    </p>
+                    <figure class="timeline__img">
+                        <img src="img/meditacao.jpg">
+                    </figure>
+                    <div class="timeline__btn">
+                        <a class="btn btn-hover" href="#">Saiba mais</a>
+                    </div>
+                </div>
+            </aside>
+            <aside class="timeline__item">
+                <div class="timeline__icon">
+                    <img src="img/icon/be-present.png">
+                </div>
+                <div class="timeline__content timeline__content--right">
+                    <h2 class="timeline__title">6º Dia - Contemplação</h2>
+                    <p class="timeline__text">
+                        A contemplação pode ser resumida como o ato de olhar algo como ele realmente é e buscar compreendê-lo. Ao fazer isso, melhoramos nossa concentração, atenção e humildade. Saiba dos benefícios da prática da contemplação constantemente.
+                    </p>
+                    <figure class="timeline__img">
+                        <img src="img/contemplacao.jpg">
+                    </figure>
+                    <div class="timeline__btn">
+                        <a class="btn btn-hover" href="#">Saiba mais</a>
+                    </div>
+                </div>
+            </aside>
+            <aside class="timeline__item">
+                <div class="timeline__icon">
+                    <img src="img/icon/sleep.png">
+                </div>
+                <div class="timeline__content">
+                    <h2 class="timeline__title">7º Dia - Descanso</h2>
+                    <p class="timeline__text">
+                        E quem não gosta de um cochilo de tarde, ou de poder dormir um pouco a mais na parte da manhã? E se eu te contasse que descansar é algo muito importante e que você deveria fazer isso mais vezes? Descansar não é apenas dormir ou ficar sentado, você também pode sair com amigos, ir à numa festa, viajar ou até mesmo jogar video-games. A ideia aqui é que você se alivie do estresse relaxando seu corpo e sua mente.
+                    </p>
+                    <figure class="timeline__img">
+                        <img src="img/descanso.jpg">
+                    </figure>
+                    <div class="timeline__btn">
+                        <a class="btn btn-hover" href="#">Saiba mais</a>
+                    </div>
+                </div>
+            </aside>
+        </div>    
+    </main>
+
+    <section class="container community" id="formulario">
+        <h2 class="title title--main">Junte-se a nossa Comunidade</h2>
+
+        <div class="card__quotes">
+            <div class="card__content">
+                <p class="card__text">Nosso objetivo é claro: Mostrar a você que é possível ter qualidade de vida, sem fazer grandes sacrifícios. Por isso, gostaríamos de lhe convidar para participar de nossa comunidade. Nós lhe enviaremos conteúdos diferenciados via e-mail, além de convidá-lo(a) para participar de <b>Meetups</b> e <b>Eventos</b> para fortalecer toda a comunidade!</p>
+                <blockquote>
+                    As pessoas não escolhem seus futuros; elas escolhem seus hábitos, e seus hábitos escolhem seus futuros.
+                    <span class="author">Frederick M. Alexander</span>
+                </blockquote>
+            </div>
+            <div class="card__content">
+                <p class="card__text">Saiba que você pode fazer muito mais do pensa. Tudo que existe em você foi feito para alcançar a excelência, <b>permita-se</b>.</p>
+                <blockquote>
+                    A vida não se resume a se encontrar. A vida se resume a se criar.
+                    <span class="author">George Bernard Shaw</span>
+                </blockquote>
+            </div>
+            <div class="card__content">
+                <p class="card__text">Há diversas pessoas como você, que querem poder fazer melhor, ser o(a) melhor. Gostaríamos de te dizer que você não está sozinho(a), <b>junte-se</b> a nós!</p>
+                <blockquote>
+                    Ninguém que algum dia deu seu melhor se arrependeu disso.   
+                    <span class="author">George Halas</span>
+                </blockquote>
+            </div>
+        </div>
+        <form class="form">
+            <div class="form__header">
+                <div class="form__header form__header--left">
+                    <div class="form__button close"></div>
+                    <div class="form__button maximize"></div>
+                    <div class="form__button minimize"></div>
+                </div>
+                <div class="form__header form__header--right">
+                    <div class="form__ellipsis"></div>
+                    <div class="form__ellipsis"></div>
+                    <div class="form__ellipsis"></div>
+                </div>
+            </div>
+            <div class="form__body">
+                <div class="form__item left">
+                    <div class="app__title">
+                        <h2>Cadastre-se</h2>
+                    </div>
+                </div>
+                <div class="form__item">
+                    <div class="app__form">
+                        <fieldset class="app__form-group">
+                            <input class="app__form-control" id="name" type="name" placeholder="Seu nome" maxlength="25" pattern="^[a-zA-Z\s]*$" title="Este campo aceita apenas letras" required/>
+                        </fieldset>
+                        <fieldset class="app__form-group">
+                            <input class="app__form-control" id="email" type="email" placeholder="Seu melhor e-mail" maxlength="25" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Insira um e-mail válido" required/>
+                        </fieldset>
+                        <fieldset class="app__form-group">
+                            <input class="app__form-control" id="phone" type="tel"  placeholder="Número para contato"  minlength="10"  maxlength="11" pattern="\d+" title='Insira um número válido sem parênteses "(" ou hífen "-"' onkeyup="this.value=this.value.replace(/[^\d]/,'')" required/>
+                        </fieldset>
+                        <fieldset class="app__form-group message">
+                            <textarea class="app__form-control" id="feedback" placeholder="Nos deixe seu feedback :)" rows="3" opcional></textarea>
+                        </fieldset> 
+                        <fieldset class="app__form-group buttons">
+                            <input id="submit" type="submit" placeholder="ENVIAR" class="btn btn-form btn-md"/>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+        </form>            
+    </section>
+
+    <footer class="footer" id="contato">
+        <a class="footer__credits" href="https://angelinopires.github.io/" target="_blank">powered by <b>Angelino Pires</b></a>
+        <div class="footer__social">
+            <a href="https://www.facebook.com/Super7-1107928379373777" class="footer__icon facebook" target="_blank"></a>
+            <a href="https://www.linkedin.com/in/matheus-mendes-2a299313a/" class="footer__icon linkedin" target="_blank"></a>
+            <a href="#" class="footer__icon youtube" target="_blank"></a>
+        </div>
+
+        <address class="footer__copyright">
+            <p>Super 7 &copy; Todos os direitos reservados.</p>
+        </address>
+    </footer>
+    <script type="text/javascript" src="js/main.min.js"></script>
+    </body>
+</html>
